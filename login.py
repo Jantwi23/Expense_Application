@@ -11,7 +11,7 @@ def create_login():
         print("Username already exists. Try logging in or use a different username.")
         return
     password = input("Enter a new password: ") # user input new password
-    users[username] = password # adds username and password to users dict
+    users[username] = password # adds username and password to users dict (username = key, password = value)
     save_users(users) # calls function to save updated users dict
     print("User created successfully!")
 

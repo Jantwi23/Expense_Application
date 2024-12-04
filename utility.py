@@ -10,7 +10,7 @@ def add_expense():
     amount = float(input("Enter amount: ")) # user input amount and converts to float
     if category not in data["expenses"]: # check if the category doesnt already exist in expenses
         data["expenses"][category] = amount # add new category with amount
-    else:
+    else: # if category exists
         data["expenses"][category] += amount # add amount to existing value for that category
     save_data(data) # call function to save updated data
     print("Expense added successfully!")
