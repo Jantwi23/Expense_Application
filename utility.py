@@ -81,8 +81,8 @@ def generate_summary():
         print("\n--- Expense Summary ---")
         for category, amount in data["expenses"].items():
             print(f"Category: {category}, Total Spent: ${amount}")
-
-def clear_all_expenses():
+#NABIL
+def clear_all_expenses(): 
     """Clear all expense records and save the change."""
     confirmation = input("Are you sure you want to clear all expenses? (yes/no): ").lower()
     if confirmation == "yes":
