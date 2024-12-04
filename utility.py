@@ -35,52 +35,52 @@ def delete_expense():
 
 def set_budget():
     """Set a budget for a category and save it to the data file."""
-    category = input("Enter category: ")
-    if category not in data["budgets"]:
-        limit = float(input("Enter budget limit: "))
-        data["budgets"][category] = [limit, 0]  # Default spent = 0
-        save_data(data)
+    category = input("Enter category: ") # user input category for budget
+    if category not in data["budgets"]: # check if category doesnt already exists in budget
+        limit = float(input("Enter budget limit: ")) # user input budget limit and convert to float
+        data["budgets"][category] = [limit, 0]  # sets the budget limit and makes default spent = 0
+        save_data(data) # call function to save updated data
         print(f"Budget set for {category}.")
-    else:
+    else: # if budget category already exists
         print("Budget for this category already exists.")
 
 def view_budgets():
     """View all budgets."""
-    if not data["budgets"]:
+    if not data["budgets"]: # check if budget dict is empty
         print("No budgets set yet.")
-    else:
-        for category, details in data["budgets"].items():
-            print(f"Category: {category}, Limit: ${details[0]}, Spent: ${details[1]}")
+    else: # if there are budgets
+        for category, details in data["budgets"].items(): # iterates through each category and its details (limit and spent)
+            print(f"Category: {category}, Limit: ${details[0]}, Spent: ${details[1]}") # displays the budget details
 
 def update_expense():
     """Update an existing expense and save the change."""
-    category = input("Enter the category of the expense to update: ")
-    if category in data["expenses"]:
-        new_amount = float(input("Enter the new amount: "))
-        data["expenses"][category] = new_amount
-        save_data(data)
+    category = input("Enter the category of the expense to update: ") # user input category to update
+    if category in data["expenses"]: # check if category exists in expense
+        new_amount = float(input("Enter the new amount: ")) # user input new amount and convert to float
+        data["expenses"][category] = new_amount # updates the amount for specified category
+        save_data(data) # call function to save updated data
         print("Expense updated successfully!")
-    else:
+    else: # if category not found
         print("Expense not found.")
 
 def reset_budget():
     """Reset the budget for a category and save the change."""
-    category = input("Enter category to reset: ")
-    if category in data["budgets"]:
-        data["budgets"][category][1] = 0
-        save_data(data)
+    category = input("Enter category to reset: ") # user input category to reset
+    if category in data["budgets"]: # check if category exists in budget
+        data["budgets"][category][1] = 0 # reset spent value for category to 0
+        save_data(data) # call function to save updated data
         print(f"Budget for {category} has been reset.")
-    else:
+    else: # if category not found
         print("Category not found.")
 
 def generate_summary():
     """Generate a summary of total expenses for each category."""
-    if not data["expenses"]:
+    if not data["expenses"]: # check if expense dict is empty
         print("No expenses recorded yet.")
-    else:
+    else: # if there are expenses:
         print("\n--- Expense Summary ---")
-        for category, amount in data["expenses"].items():
-            print(f"Category: {category}, Total Spent: ${amount}")
+        for category, amount in data["expenses"].items(): # iterates through each category and amount
+            print(f"Category: {category}, Total Spent: ${amount}") # display category and total spent
 #NABIL
 def clear_all_expenses(): 
     """Clear all expense records and save the change."""
