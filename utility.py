@@ -82,12 +82,17 @@ def update_expense():
 #NABIL
 def reset_budget():
     """Reset the budget for a category and save the change."""
-    category = input("Enter category to reset: ") # user input category to reset
-    if category in data["budgets"]: # check if category exists in budget
-        data["budgets"][category][1] = 0 # reset spent value for category to 0
-        save_data(data) # call function to save updated data
+    # Ask user to input category to reset.
+    category = input("Enter category to reset: ")
+    # Checks to see if category exists in budget.
+    if category in data["budgets"]:
+        # Reset the spent value for the category to 0.
+        data["budgets"][category][1] = 0 
+        # Save the updated data and inform that budget has been reset.
+        save_data(data) 
         print(f"Budget for {category} has been reset.")
-    else: # if category not found
+    else: 
+        # If the category is not found, cancel and notify them.
         print("Category not found.")
 
 
