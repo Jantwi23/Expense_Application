@@ -2,7 +2,7 @@
 from utility import (
     add_expense, view_expenses, delete_expense, set_budget,
     view_budgets, update_expense, reset_budget,
-    generate_monthly_summary, clear_all_expenses
+    generate_summary, clear_all_expenses
 )
 from login import create_login, login
 
@@ -17,12 +17,11 @@ def main_menu():
         print("5. View Budgets")
         print("6. Update an Expense")
         print("7. Reset Budget for a Category")
-        print("8. Generate Monthly Summary")
+        print("8. Generate Summary")
         print("9. Clear All Expenses")
         print("10. Logout")
 
         choice = input("Enter your choice: ")
-        
         if choice == "1":
             add_expense()
         elif choice == "2":
@@ -38,7 +37,7 @@ def main_menu():
         elif choice == "7":
             reset_budget()
         elif choice == "8":
-            generate_monthly_summary()
+            generate_summary()
         elif choice == "9":
             clear_all_expenses()
         elif choice == "10":
@@ -54,9 +53,8 @@ def start_program():
         print("1. Create Login")
         print("2. Login")
         print("3. Exit")
-        
+
         choice = input("Enter your choice: ")
-        
         if choice == "1":
             create_login()
         elif choice == "2":
@@ -70,4 +68,3 @@ def start_program():
 
 if __name__ == "__main__":
     start_program()
-  
