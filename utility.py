@@ -6,13 +6,13 @@ data = load_data()
 
 def add_expense():
     """Add a new expense and save it to the data file."""
-    category = input("Enter category: ")
-    amount = float(input("Enter amount: "))
-    if category not in data["expenses"]:
-        data["expenses"][category] = amount
+    category = input("Enter category: ") # user input category
+    amount = float(input("Enter amount: ")) # user input amount
+    if category not in data["expenses"]: # check if the category doesnt already exist in expenses
+        data["expenses"][category] = amount # add new category with amount
     else:
-        data["expenses"][category] += amount
-    save_data(data)
+        data["expenses"][category] += amount # add amount to existing value for that category
+    save_data(data) # call function to save updated data
     print("Expense added successfully!")
 #NABIL
 def view_expenses():
@@ -25,12 +25,12 @@ def view_expenses():
 
 def delete_expense():
     """Delete an expense by its category and save the change."""
-    category = input("Enter category to delete: ")
-    if category in data["expenses"]:
-        del data["expenses"][category]
-        save_data(data)
+    category = input("Enter category to delete: ") # user input category to delete
+    if category in data["expenses"]: # check if the category exists in the expenses
+        del data["expenses"][category] # remove category from the expenses dict
+        save_data(data) # call function to save updated data
         print("Expense deleted successfully!")
-    else:
+    else: # if category not found
         print("Expense not found.")
 
 def set_budget():
