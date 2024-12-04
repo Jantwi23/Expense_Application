@@ -1,4 +1,3 @@
-# main.py
 from utility import (
     add_expense, view_expenses, delete_expense, set_budget,
     view_budgets, update_expense, reset_budget,
@@ -6,6 +5,7 @@ from utility import (
 )
 from login import create_login, login
 
+# Main menu - handles user choices
 def main_menu():
     """Main menu for the Smart Budget Tracker."""
     while True:
@@ -46,6 +46,7 @@ def main_menu():
         else:
             print("Invalid choice. Please try again.")
 
+# Start program - login or create an account
 def start_program():
     """Start the program with login or account creation."""
     while True:
@@ -66,5 +67,5 @@ def start_program():
         else:
             print("Invalid choice. Please try again.")
 
-if __name__ == "__main__":
-    start_program()
+# Directly call start_program()
+start_program()
