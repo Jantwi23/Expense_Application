@@ -17,11 +17,16 @@ def add_expense():
 #NABIL
 def view_expenses():
     """View all expenses."""
+    # Check if there are any expenses recorded in the "expenses" dictionary.
     if not data["expenses"]:
+        # If the dictionary is empty, inform the user that no expenses are recorded.
         print("No expenses recorded yet.")
     else:
+        # If there are expenses, iterate through each category and amount in the "expenses" dictionary.
         for category, amount in data["expenses"].items():
+            # Print each category and its corresponding amount in a formatted string.
             print(f"Category: {category}, Amount: ${amount}")
+
 #CHRIS
 def delete_expense():
     """Delete an expense by its category and save the change."""
@@ -81,17 +86,29 @@ def generate_summary():
         print("\n--- Expense Summary ---")
         for category, amount in data["expenses"].items(): # iterates through each category and amount
             print(f"Category: {category}, Total Spent: ${amount}") # display category and total spent
+
+
 #NABIL
-def clear_all_expenses(): 
+def clear_all_expenses():
     """Clear all expense records and save the change."""
+    # Ask the user for confirmation to clear all expenses.
+    # Convert the input to lowercase to handle case-insensitive responses.
     confirmation = input("Are you sure you want to clear all expenses? (yes/no): ").lower()
+
+    # Check if the user confirmed by typing "yes".
     if confirmation == "yes":
+        # Clear all entries from the "expenses" dictionary.
         data["expenses"].clear()
+
+        # Save the updated data (after clearing) to ensure persistence.
         save_data(data)
+
+        # Inform the user that all expenses have been cleared.
         print("All expenses cleared.")
     else:
+        # If the user did not confirm, cancel the operation and notify them.
         print("Operation canceled.")
-        
+
         
         
         
