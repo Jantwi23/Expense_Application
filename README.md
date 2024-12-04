@@ -1,4 +1,4 @@
-# Expense_Application
+# Expense Application
 Expense Application
 Smart Budget Tracker Project
 
