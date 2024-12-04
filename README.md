@@ -42,5 +42,3 @@ Report Generation Module:
 Alert & Export Modules:
 8. Check Budget Alerts: Notify the user if any category’s spending is near or over the budget limit.
 10. Export Expenses to CSV: Allow users to export their expense records to a CSV file for external analysis. (Optional) 
-![image](https://github.com/user-attachments/assets/28bca19c-95e1-4553-9395-b0076bbeb807)
-
