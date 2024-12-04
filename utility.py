@@ -7,7 +7,7 @@ data = load_data()
 def add_expense():
     """Add a new expense and save it to the data file."""
     category = input("Enter category: ") # user input category
-    amount = float(input("Enter amount: ")) # user input amount
+    amount = float(input("Enter amount: ")) # user input amount and converts to float
     if category not in data["expenses"]: # check if the category doesnt already exist in expenses
         data["expenses"][category] = amount # add new category with amount
     else:
