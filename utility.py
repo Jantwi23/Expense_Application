@@ -14,7 +14,7 @@ def add_expense():
         data["expenses"][category] += amount
     save_data(data)
     print("Expense added successfully!")
-
+#NABIL
 def view_expenses():
     """View all expenses."""
     if not data["expenses"]:

@@ -1,0 +1,2 @@
+expenses:{}
+budgets:{'food': [100.0, 0]}
