@@ -1,12 +1,7 @@
 # Expense_Application
-Smart Budget Tracker Project Proposal
-Team Members:
-- Joel
-- Nabil
-- Chris
+Smart Budget Tracker Project 
 Description of the Project:
 The Smart Budget Tracker is a Python-based terminal application that allows users to manage their personal finances by tracking expenses, setting budgets, viewing reports, and receiving alerts. It is designed to work through terminal I/O and helps users gain insights into their spending habits.
-
 The project includes 10 functionalities to provide a comprehensive budget tracking experience.
 Specifications of the Project:
 a. Tentative I/O:s
