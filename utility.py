@@ -3,6 +3,8 @@ from data_storage import load_data, save_data
 
 # Load data on module import
 data = load_data()
+
+
 #CHRIS
 def add_expense():
     """Add a new expense and save it to the data file."""
@@ -14,6 +16,8 @@ def add_expense():
         data["expenses"][category] += amount # add amount to existing value for that category
     save_data(data) # call function to save updated data
     print("Expense added successfully!")
+
+
 #NABIL
 def view_expenses():
     """View all expenses."""
@@ -26,6 +30,8 @@ def view_expenses():
         for category, amount in data["expenses"].items():
             # Print each category and its corresponding amount in a formatted string.
             print(f"Category: {category}, Amount: ${amount}")
+
+
 
 #CHRIS
 def delete_expense():
@@ -48,6 +54,8 @@ def set_budget():
         print(f"Budget set for {category}.")
     else: # if budget category already exists
         print("Budget for this category already exists.")
+
+
 #CHRIS
 def view_budgets():
     """View all budgets."""
@@ -57,6 +65,8 @@ def view_budgets():
         for category, details in data["budgets"].items(): # iterates through each category and its details (limit and spent)
             print(f"Category: {category}, Limit: ${details[0]}, Spent: ${details[1]}") # displays the budget details
 
+
+#CHRIS
 def update_expense():
     """Update an existing expense and save the change."""
     category = input("Enter the category of the expense to update: ") # user input category to update
@@ -67,6 +77,8 @@ def update_expense():
         print("Expense updated successfully!")
     else: # if category not found
         print("Expense not found.")
+
+
 #NABIL
 def reset_budget():
     """Reset the budget for a category and save the change."""
@@ -77,6 +89,8 @@ def reset_budget():
         print(f"Budget for {category} has been reset.")
     else: # if category not found
         print("Category not found.")
+
+
 #CHRIS
 def generate_summary():
     """Generate a summary of total expenses for each category."""
