@@ -1,2 +1,2 @@
-expenses:{}
-budgets:{'food': [100.0, 0]}
+expenses:{'tesla': 1002.0}
+budgets:{'food': [100.0, 0], 'tesla': [501.0, 502.0]}
